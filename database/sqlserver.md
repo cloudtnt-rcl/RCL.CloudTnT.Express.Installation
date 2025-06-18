@@ -16,7 +16,7 @@ In this section you will learn how to set up a SQL Server database for the Crede
 
 - Download the executable files for creating the database tables.
 
-- [Web Wallet Application Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/efbundle-sqlserver-v1-windows.exe)
+- [Web Wallet Application Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-sqlserver-v1-windows.exe)
 - [Issuer Application Database Executable]()
 
 - Save the file to a folder on your computer, eg. ``c:/cloudtnt``
@@ -27,17 +27,16 @@ In your database server, create separate databases for the applications and assi
 
 ## Run the executable
 
-- cd into the folder that you saved the executable file
+- cd into the folder that you saved the executable file, example:
 
 ```bash
 > cd c:/cloudtnt
-
 ```
 Set the connection string property and run the executable using ``Powershell``
 
 ### Example: Stand Alone PC (SQL Server Express)
 ```bash
-> .\efbundle-sqlserver-v1-windows.exe --connection 'Data Source=.\\SQLEXPRESS;Initial Catalog=cloudtntwalletdb;Integrated Security=True;Encrypt=False'
+> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=.\\SQLEXPRESS;Initial Catalog=cloudtntwalletdb;Integrated Security=True;Encrypt=False'
 ```
 ### Example: Public Cloud (Azure SQL)
 
