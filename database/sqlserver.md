@@ -32,13 +32,16 @@ In your database server, create separate databases for the applications and assi
 ```bash
 > cd c:/cloudtnt
 ```
-Set the connection string property for your sql database server and run the executable using ``Powershell``, example:
+Set the connection string property for your SQL Server database and run the executable using ``Powershell``, example:
 
 ### Example: Stand Alone PC (SQL Server Express)
 ```bash
 > .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=MYCOMPUTERNAME\SQLEXPRESS;Initial Catalog=cloudtntwalletdb;Integrated Security=True;Encrypt=False'
 ```
 ### Example: Public Cloud (Azure SQL)
+```bash
+> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=mysqlserver.database.windows.net;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
 
 ### Example: Public Cloud (AWS RDS for SQL Server)
 
