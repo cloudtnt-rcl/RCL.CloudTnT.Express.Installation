@@ -32,15 +32,15 @@ In your database server, create separate databases for the applications and assi
 ```bash
 > cd c:/cloudtnt
 ```
-Set the connection string property for your SQL Server database and run the executable using ``Powershell``, example:
+Set the connection string property for your SQL Server database and run the executable using ``Powershell``:
 
 ### Example: Stand Alone PC (SQL Server Express)
 ```bash
-> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=MYCOMPUTERNAME\SQLEXPRESS;Initial Catalog=cloudtntwalletdb;Integrated Security=True;Encrypt=False'
+> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=YOURCOMPUTERNAME\SQLEXPRESS;Initial Catalog=cloudtntwalletdb;Integrated Security=True;Encrypt=False'
 ```
 ### Example: Public Cloud (Azure SQL)
 ```bash
-> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=mysqlserver.database.windows.net;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
 ```
 
 ### Example: Public Cloud (AWS RDS for SQL Server)
@@ -59,4 +59,43 @@ Set the connection string property for your SQL Server database and run the exec
 ```
 
 # Linux
+
+## Download 
+
+- create a directory to store the binary file
+
+```bash
+> mkdir cloudtnt
+```
+
+- navigate to the directory
+
+```bash
+> cd cloudtnt
+```
+
+- Download the binary file for creating the database tables
+
+```bash
+wget -O walletdb "https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-sqlserver-v1-linux"
+```
+
+- Make the binary executable
+
+```bash
+> chmod +x walletdb
+```
+
+- Set the connection string property for your SQL Server database and run the executable :
+
+### Example: Stand Alone (SQL Server Express)
+```bash
+> .\walletdb --connection 'Data Source=MYCOMPUTERNAME\SQLEXPRESS;Initial Catalog=cloudtntwalletdb;Integrated Security=True;Encrypt=False'
+```
+
+### Example: Public Cloud (Azure SQL)
+```bash
+> ./walletdb --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
 
