@@ -22,11 +22,19 @@ The applications are written with ASP.NET Core and can run on multiple platforms
 
 ## Database
 
-The application requires a SQL relational database to store its data. The following databases are supported
+The applications require a SQL relational database to store its data. The following databases are supported
 
 - Sql Server
 - Postgres
 - MySql
 
 These databases can be hosted in the public cloud, on-premise or PC.
+
+## Web Application Hosting
+
+The web applications is hosted in a web browser. The following hosting systems are supported
+
+- Cloud Hosting
+- On-Premise Hosting
+- Stand Alone Hosting
 
