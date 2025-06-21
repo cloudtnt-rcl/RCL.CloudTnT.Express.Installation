@@ -40,14 +40,23 @@ Set the connection string property for your SQL Server database and run the exec
 ```
 ### Example: Public Cloud (Azure SQL)
 ```bash
-> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=mysqlserver.database.windows.net;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=mysqlserver.database.windows.net;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
 ```
 
 ### Example: Public Cloud (AWS RDS for SQL Server)
+```bash
+.\wallet-sqlserver-v1-windows.exe --connection 'Data yoursqlserver.dfrtehrder.us-east-1.rds.amazonaws.com;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
 
 ### Example: Public Cloud (Google Cloud SQL for SQL Server)
+```bash
+.\wallet-sqlserver-v1-windows.exe --connection 'Data Source=34.56.75.195;Initial Catalog=cloudtntwalletdb;User ID=sqlserver;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
 
 ### Example: On-Premise (Microsoft SQL Server)
+```bash
+.\wallet-sqlserver-v1-windows.exe --connection 'Data Source=192.168.0.3;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
 
 # Linux
 
