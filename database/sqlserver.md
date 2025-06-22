@@ -8,7 +8,7 @@ nav_order: 1
 
 # SQL Server
 
-In this section you will learn how to set up a SQL Server database for the Credentials Web Wallet and Credentials Issuer applications. The database will be setup using a executable file. You can run the executable file either in a Windows or Linux environment.
+In this section, you will learn how to set up a SQL Server database for the Credentials Web Wallet and Credentials Issuer applications. The database tables will be created using an executable file. You can run the executable file either in a Windows or Linux environment.
 
 # Windows
 
@@ -16,10 +16,10 @@ In this section you will learn how to set up a SQL Server database for the Crede
 
 - Download the executable files for creating the database tables
 
-    - [Web Wallet Application Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-sqlserver-v1-windows.exe)
-    - [Issuer Application Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/issuer-sqlserver-v1-windows.exe)
+    - [Credential Web Wallet Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-sqlserver-v1-windows.exe)
+    - [Credential Issuer Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/issuer-sqlserver-v1-windows.exe)
 
-- Save the files to a folder on your computer, eg. ``c:/cloudtnt``
+- Save the file to a folder on your computer, eg. ``c:/cloudtnt``
 
 ## Create the Database
 
