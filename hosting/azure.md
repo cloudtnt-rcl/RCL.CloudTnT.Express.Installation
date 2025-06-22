@@ -16,8 +16,8 @@ In this section, you will learn how to host the Credentials Web Wallet and Crede
 
 - Download the application ``.zip`` file
 
-    - [Credentials Web Wallet](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/issuer-webapp-v1-winx86.zip)
-    - [Credentials Issuer](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-webapp-v1-winx86.zip)
+    - [Credentials Web Wallet](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-webapp-v1-winx86.zip)
+    - [Credentials Issuer](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/issuer-webapp-v1-winx86.zip)
 
 - Install the ``.zip`` file in the web app following the instructions in the following link :
 
