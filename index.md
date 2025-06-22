@@ -12,11 +12,11 @@ This documentation is targeted at administrators who install and host the Creden
 
 # Hosting Options
 
-The applications are written with ASP.NET Core and can run on multiple platforms. The applications can run on :
+The applications can run on :
 
 - Public Clouds (eg. AWS, Microsoft Azure, Google Cloud, etc)
 - On-Premise (eg. on-premise local servers)
-- Stand Alone PC (eg. desktop/laptop computers)
+- Stand Alone (eg. desktop/laptop Windows/Linux computers)
 
 # Requirements
 
@@ -24,11 +24,11 @@ The applications are written with ASP.NET Core and can run on multiple platforms
 
 The applications require a SQL relational database to store its data. The following databases are supported
 
-- Sql Server
 - Postgres
 - MySql
+- Sql Server
 
-These databases can be hosted in the public cloud, on-premise or PC.
+These databases can be hosted in the public cloud, on-premise or stand-alone.
 
 ## Web Application Hosting
 
@@ -36,5 +36,5 @@ The web applications is hosted in a web browser. The following hosting systems a
 
 - Cloud Hosting
 - On-Premise Hosting
-- Stand Alone Hosting
+- Stand-Alone Hosting
 

@@ -17,7 +17,7 @@ In this section you will learn how to set up a SQL Server database for the Crede
 - Download the executable files for creating the database tables
 
     - [Web Wallet Application Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-sqlserver-v1-windows.exe)
-    - [Issuer Application Database Executable]()
+    - [Issuer Application Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/issuer-sqlserver-v1-windows.exe)
 
 - Save the files to a folder on your computer, eg. ``c:/cloudtnt``
 
@@ -35,12 +35,24 @@ In your database server, create separate databases for the applications and assi
 Set the connection string property for your SQL Server database and run the executable using ``Powershell``:
 
 ### Example: Stand Alone PC (SQL Server Express)
+
+**Credential Web Wallet** 
 ```bash
 > .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=YOURCOMPUTERNAME\SQLEXPRESS;Initial Catalog=cloudtntwalletdb;Integrated Security=True;Encrypt=False'
 ```
+**Credential Issuer** 
+```bash
+> .\issuer-sqlserver-v1-windows.exe --connection 'Data Source=YOURCOMPUTERNAME\SQLEXPRESS;Initial Catalog=cloudtntissuerdb;Integrated Security=True;Encrypt=False'
+```
+
 ### Example: Public Cloud (Azure SQL)
+**Credential Web Wallet** 
 ```bash
 > .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+**Credential Issuer** 
+```bash
+> .\issuer-sqlserver-v1-windows.exe --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=cloudtntissuerdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
 ```
 
 ### Example: Public Cloud (AWS RDS for SQL Server)
