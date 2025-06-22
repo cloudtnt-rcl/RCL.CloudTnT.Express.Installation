@@ -10,18 +10,14 @@ nav_order: 1
 
 In this section, you will learn how to host the Credentials Web Wallet and Credentials Issuer applications in Microsoft Azure.
 
-## Cloud Hosting
-
-The Credentials Web Wallet and Credentials Issuer applications are built with the ASP.NET Core framework. The application is hosted in the cloud using the cloud provider's web application hosting services for ASP.NET Core applications.
-
 ## Hosting in a Microsoft Azure Web App
 
 - It is recommended that the Web App use the NET 8 (LTS) framework in a Windows operating system 32 Bit (x86) platform.
 
 - Download the application ``.zip`` files
 
-    - [Credentials Web Wallet](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-webapp-v1.zip)
-    - [Credentials Issuer]()
+    - [Credentials Web Wallet](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/issuer-webapp-v1-winx86.zip)
+    - [Credentials Issuer](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-webapp-v1-winx86.zip)
 
 - Install the zip file in the web app following the instructions in the following link :
 
