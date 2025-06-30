@@ -38,48 +38,48 @@ Set the connection string property for your PostgreSQL database and run the exec
 
 **Credential Web Wallet**
 ```bash
-.\wallet-sqlserver-v1-windows.exe --connection 'Host=192.168.0.70;Port=5432;Password=yourpassword;Persist Security Info=True;Username=yourusername;Database=yourdatabase'
+.\wallet-postgres-v1-windows.exe --connection 'Host=192.168.0.70;Port=5432;Password=yourpassword;Persist Security Info=True;Username=yourusername;Database=yourdatabase'
 ```
 
 **Credential Issuer**
 ```bash
-.\issuer-sqlserver-v1-windows.exe --connection ''
+.\issuer-postgres-v1-windows.exe --connection ''
 ```
 
 ### Example: Public Cloud (Azure PostgreSQL)
 
 **Credential Web Wallet**
 ```bash
-.\wallet-sqlserver-v1-windows.exe --connection ''
+.\wallet-postgres-v1-windows.exe --connection ''
 ```
 
 **Credential Issuer**
 ```bash
-.\issuer-sqlserver-v1-windows.exe --connection ''
+.\issuer-postgres-v1-windows.exe --connection ''
 ```
 
 ### Example: Public Cloud (AWS RDS for PostgreSQL)
 
 **Credential Web Wallet**
 ```bash
-.\wallet-sqlserver-v1-windows.exe --connection ''
+.\wallet-postgres-v1-windows.exe --connection ''
 ```
 
 **Credential Issuer**
 ```bash
-.\issuer-sqlserver-v1-windows.exe --connection ''
+.\issuer-postgres-v1-windows.exe --connection ''
 ```
 
 ### Example: Public Cloud (Google Cloud SQL for PostgreSQL)
 
 **Credential Web Wallet**
 ```bash
-.\wallet-sqlserver-v1-windows.exe --connection ''
+.\wallet-postgres-v1-windows.exe --connection ''
 ```
 
 **Credential Issuer**
 ```bash
-.\issuer-sqlserver-v1-windows.exe --connection ''
+.\issuer-postgres-v1-windows.exe --connection ''
 ```
 
 # Linux
