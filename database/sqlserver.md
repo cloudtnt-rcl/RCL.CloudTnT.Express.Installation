@@ -21,11 +21,11 @@ In this section, you will learn how to set up a SQL Server database for the Cred
 
 - Save the file to a folder on your computer, eg. ``c:/cloudtnt``
 
-## Create or use an existing Database
+## Create or use an existing database
 
-In your database server, use an existing database or create a new database to store the application's data.
+In your SQL Server database server, use an existing database or create a new database to store the application's data.
 
-## Run the executable
+## Run the executable file
 
 - cd into the folder that you saved the executable file, example:
 
@@ -96,7 +96,11 @@ Set the connection string property for your SQL Server database and run the exec
 
 # Linux
 
-## Download 
+## Create or use an existing database
+
+In your SQL Server database server, use an existing database or create a new database to store the application's data.
+
+## Download the executable file
 
 - create a directory to store the binary file
 
@@ -121,6 +125,9 @@ wget -O walletdb "https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deploymen
 ```bash
 wget -O issuerdb "https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/issuer-sqlserver-v1-linux"
 ```
+
+## Run the executable file
+
 - Make the binary executable
 
 **Credential Web Wallet**
