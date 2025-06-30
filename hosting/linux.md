@@ -111,9 +111,9 @@ WantedBy=multi-user.target
 
 **Credential Issuer**
 ```bash
-> sudo systemctl enable issuer-wallet.service
-> sudo systemctl start issuer-wallet.service
-> sudo systemctl status issuer-wallet.service
+> sudo systemctl enable cloudtnt-issuer.service
+> sudo systemctl start cloudtnt-issuer.service
+> sudo systemctl status cloudtnt-issuer.service
 ```
 - Ensure the service is running
 

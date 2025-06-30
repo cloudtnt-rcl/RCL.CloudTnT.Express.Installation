@@ -14,16 +14,16 @@ In this section, you will learn how to set up a SQL Server database for the Cred
 
 ## Download 
 
-- Download the executable files for creating the database tables
+- Download the executable file for creating the database tables
 
     - [Credential Web Wallet Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-sqlserver-v1-windows.exe)
     - [Credential Issuer Database Executable](https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/issuer-sqlserver-v1-windows.exe)
 
 - Save the file to a folder on your computer, eg. ``c:/cloudtnt``
 
-## Create the Database
+## Create or use an existing Database
 
-In your database server, create separate databases for the applications and assign a name for the databases: eg. ``cloudtntwalletdb``, ``cloudtntissuerdb``
+In your database server, use an existing database or create a new database to store the application's data.
 
 ## Run the executable
 
@@ -36,38 +36,62 @@ Set the connection string property for your SQL Server database and run the exec
 
 ### Example: Stand Alone PC (SQL Server Express)
 
-**Credential Web Wallet** 
+**Credential Web Wallet**
 ```bash
-> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=YOURCOMPUTERNAME\SQLEXPRESS;Initial Catalog=cloudtntwalletdb;Integrated Security=True;Encrypt=False'
+> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=YOURCOMPUTERNAME\SQLEXPRESS;Initial Catalog=yourdatabase;Integrated Security=True;Encrypt=False'
 ```
-**Credential Issuer** 
+
+**Credential Issuer**
 ```bash
-> .\issuer-sqlserver-v1-windows.exe --connection 'Data Source=YOURCOMPUTERNAME\SQLEXPRESS;Initial Catalog=cloudtntissuerdb;Integrated Security=True;Encrypt=False'
+> .\issuer-sqlserver-v1-windows.exe --connection 'Data Source=YOURCOMPUTERNAME\SQLEXPRESS;Initial Catalog=yourdatabase;Integrated Security=True;Encrypt=False'
 ```
 
 ### Example: Public Cloud (Azure SQL)
-**Credential Web Wallet** 
+
+**Credential Web Wallet**
 ```bash
-> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+> .\wallet-sqlserver-v1-windows.exe --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
 ```
-**Credential Issuer** 
+
+**Credential Issuer**
 ```bash
-> .\issuer-sqlserver-v1-windows.exe --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=cloudtntissuerdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+> .\issuer-sqlserver-v1-windows.exe --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
 ```
 
 ### Example: Public Cloud (AWS RDS for SQL Server)
+
+**Credential Web Wallet**
 ```bash
-.\wallet-sqlserver-v1-windows.exe --connection 'Data yoursqlserver.dfrtehrder.us-east-1.rds.amazonaws.com;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+.\wallet-sqlserver-v1-windows.exe --connection 'Data yoursqlserver.dfrtehrder.us-east-1.rds.amazonaws.com;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
+**Credential Issuer**
+```bash
+.\issuer-sqlserver-v1-windows.exe --connection 'Data yoursqlserver.dfrtehrder.us-east-1.rds.amazonaws.com;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
 ```
 
 ### Example: Public Cloud (Google Cloud SQL for SQL Server)
+
+**Credential Web Wallet**
 ```bash
-.\wallet-sqlserver-v1-windows.exe --connection 'Data Source=34.56.75.195;Initial Catalog=cloudtntwalletdb;User ID=sqlserver;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+.\wallet-sqlserver-v1-windows.exe --connection 'Data Source=34.56.75.195;Initial Catalog=yourdatabase;User ID=sqlserver;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
+**Credential Issuer**
+```bash
+.\issuer-sqlserver-v1-windows.exe --connection 'Data Source=34.56.75.195;Initial Catalog=yourdatabase;User ID=sqlserver;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
 ```
 
 ### Example: On-Premise (Microsoft SQL Server)
+
+**Credential Web Wallet**
 ```bash
-.\wallet-sqlserver-v1-windows.exe --connection 'Data Source=192.168.0.3;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+.\wallet-sqlserver-v1-windows.exe --connection 'Data Source=192.168.0.3;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
+**Credential Issuer**
+```bash
+.\issuer-sqlserver-v1-windows.exe --connection 'Data Source=192.168.0.3;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
 ```
 
 # Linux
@@ -88,26 +112,86 @@ Set the connection string property for your SQL Server database and run the exec
 
 - Download the binary file for creating the database tables
 
+**Credential Web Wallet**
 ```bash
 wget -O walletdb "https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/wallet-sqlserver-v1-linux"
 ```
 
+**Credential Issuer**
+```bash
+wget -O issuerdb "https://github.com/cloudtnt-rcl/RCL.CloudTnT.Express.Deployment/releases/download/V1.0/issuer-sqlserver-v1-linux"
+```
 - Make the binary executable
 
+**Credential Web Wallet**
 ```bash
 > chmod +x walletdb
+```
+
+**Credential Web Wallet**
+```bash
+> chmod +x issuerdb
 ```
 
 - Set the connection string property for your SQL Server database and run the executable :
 
 ### Example: Stand Alone (SQL Server Express)
+
+**Credential Web Wallet**
 ```bash
-> .\walletdb --connection 'Data Source=MYCOMPUTERNAME\SQLEXPRESS;Initial Catalog=cloudtntwalletdb;Integrated Security=True;Encrypt=False'
+> .\walletdb --connection 'Data Source=MYCOMPUTERNAME\SQLEXPRESS;Initial Catalog=yourdatabase;Integrated Security=True;Encrypt=False'
+```
+
+**Credential Web Wallet**
+```bash
+> .\issuerdb --connection 'Data Source=MYCOMPUTERNAME\SQLEXPRESS;Initial Catalog=yourdatabase;Integrated Security=True;Encrypt=False'
 ```
 
 ### Example: Public Cloud (Azure SQL)
+
+**Credential Web Wallet**
 ```bash
-> ./walletdb --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=cloudtntwalletdb;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+> ./walletdb --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
 ```
 
+**Credential Issuer**
+```bash
+> ./issuerdb --connection 'Data Source=yoursqlserver.database.windows.net;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
+### Example: Public Cloud (AWS RDS for SQL Server)
+
+**Credential Web Wallet**
+```bash
+./walletdb --connection 'Data yoursqlserver.dfrtehrder.us-east-1.rds.amazonaws.com;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
+**Credential Issuer**
+```bash
+./issuer --connection 'Data yoursqlserver.dfrtehrder.us-east-1.rds.amazonaws.com;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
+### Example: Public Cloud (Google Cloud SQL for SQL Server)
+
+**Credential Web Wallet**
+```bash
+./walletdb --connection 'Data Source=34.56.75.195;Initial Catalog=yourdatabase;User ID=sqlserver;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
+**Credential Issuer**
+```bash
+./issuerdb --connection 'Data Source=34.56.75.195;Initial Catalog=yourdatabase;User ID=sqlserver;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
+### Example: On-Premise (Microsoft SQL Server)
+
+**Credential Web Wallet**
+```bash
+./walletdb --connection 'Data Source=192.168.0.3;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
+
+**Credential Issuer**
+```bash
+./issuerdb --connection 'Data Source=192.168.0.3;Initial Catalog=yourdatabase;User ID=yourusername;Password=yourpassword;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False'
+```
 
